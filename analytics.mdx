@@ -2,7 +2,7 @@
 title: "Analytics"
 ---
 
-The **Analytics** tab is the behavior-focused screen. Where the [Insights Report](/results) tells you what the problems are, Analytics shows how testers moved through the flow and where friction actually happened.
+The **Analytics** tab is the behavior-focused screen. Where the [Insights Report](/results) tells you what the problems are, Analytics shows how testers moved through the flow and where friction actually happened. Everything here is derived from the testers' step-by-step transcripts.
 
 ## Navigation overview
 
@@ -10,16 +10,56 @@ The top section summarizes movement through the flow:
 
 | Metric | What it shows |
 | --- | --- |
-| **Total testers** | How many synthetic testers ran the flow |
+| **Total testers** | The planned tester count for the test — the denominator for the rates below |
 | **Success rate** | Share of testers who reached the goal |
-| **Drop-off rate** | Share who left before completing |
-| **Misclick rate** | How often testers clicked somewhere that didn't move them forward |
+| **Drop-off rate** | Share who left before completing (the inverse of success rate) |
+| **Misclick rate** | Share of clicks that didn't do what a click should |
 | **Average steps** | Typical number of steps taken to complete |
 | **Min / Max steps** | The shortest and longest paths taken |
 
+### How the numbers are calculated
+
+<AccordionGroup>
+  <Accordion title="Success rate & drop-off">
+    A tester counts as **successful** when they reach the goal:
+
+    - On **live tests**, when any step reaches the stop condition or marks the mission complete.
+    - On **interactive prototypes** with a defined end frame, only when their last real step lands on that end frame.
+    - Otherwise, when they reach a final step.
+
+    A tester who drops off at any step counts as unsuccessful. **Success rate** is successful testers ÷ total testers. **Drop-off rate** isn't measured separately — it's 100% minus the success rate.
+  </Accordion>
+
+  <Accordion title="Misclick rate">
+    A misclick is a click that didn't behave like a successful click. How it's measured depends on the source:
+
+    - **Interactive prototypes** — of the clicks that could be matched to an interactive target, the share that missed one (landed outside a hotspot).
+    - **Live prototype and slideshow flows** — of the click-like actions (waits excluded), the share after which the screen didn't change.
+    - **Plain live-website tests** — not available, shown as a dash.
+  </Accordion>
+
+  <Accordion title="Step counts">
+    Steps are counted as **logical steps**, not raw actions: the final reflection step is excluded, and consecutive scrolls in the same direction collapse into a single step. Average, minimum, and maximum are then taken across all testers.
+  </Accordion>
+</AccordionGroup>
+
 ## Journeys diagram
 
-Below the overview, a **Journeys Diagram** lays out the step paths with frame previews, so you can see how testers progressed from screen to screen — and where paths split, loop, or diverge between successful and unsuccessful runs.
+Below the overview, a **Journeys Diagram** lays out the step paths with frame previews, so you can see how testers progressed from screen to screen — and where paths split, loop, or diverge between successful and unsuccessful runs. Consecutive repeats of the same frame are collapsed first, then the diagram shows:
+
+- **Nodes** — each node is a frame at a position in the journey. Its count is the number of unique testers who were on that frame at that point; its percentage is that count over all testers in the journey.
+- **Edges** — the number of unique testers who moved from one frame to the next.
+
+### Paths
+
+Testers are also grouped by the exact sequence of frames they visited (for example, `0 > 2 > 4`):
+
+| Column | What it shows |
+| --- | --- |
+| **Status** | **Success** only if every tester on the path completed the flow; otherwise **Drop-off** |
+| **Testers** | Unique testers who followed that exact path |
+| **Steps** | Number of frames visited in the path (not raw clicks) |
+| **Misclicks** | The misclick rate above, scoped to the testers on that path |
 
 ## Frame analytics
 
@@ -28,10 +68,15 @@ Select any frame to drill into how testers behaved on that specific screen:
 | View | What it shows |
 | --- | --- |
 | **Heatmap** | Where testers clicked on the frame |
-| **Total clicks** | How many clicks the frame received |
-| **Misclick rate** | How often clicks on this frame didn't lead where the tester expected |
-| **Average attempts** | Typical number of tries before moving on |
+| **Total testers** | Testers who had at least one real step on the frame |
+| **Total clicks** | Evaluable clicks on the frame — not every raw action |
+| **Misclick rate** | The misclick rate above, scoped to this screen |
+| **Average attempts** | Typical number of tries per visit to the screen |
 | **Tester comments** | Remarks tied to that specific frame |
+
+<Note>
+  **Average attempts** is the mean number of action attempts per visit to a screen; on live prototype flows it's shown instead as total clicks divided by the testers who reached the screen. Per-screen **misclick rate** is hidden (shown as a dash) when a screen has no recorded clicks or no interactive targets, and for plain live-website tests.
+</Note>
 
 This is the best tab for questions like: where do testers hesitate, which screen causes misclicks, how many steps success usually takes, and where successful and unsuccessful paths part ways.
 
