@@ -51,9 +51,9 @@
         "group": "Audiences",
         "icon": "users-round",
         "pages": [
-          "account/audiences",
-          "account/audiences/building-an-audience",
-          "account/audiences/audience-enrichment"
+          "audiences/overview",
+          "audiences/building-an-audience",
+          "audiences/enrichment"
         ]
       },
       "account/projects",
@@ -174,19 +174,15 @@
         "group": "Test Types",
         "expanded": true,
         "pages": [
-          "testing/accessibility-test",
           "testing/ai-live-website",
-          "testing/ai-user-research",
-          "testing/human-test"
+          "testing/ai-user-research"
         ]
       },
       {
         "group": "Guides",
         "pages": [
-          "guides/testing-live-websites",
           "guides/concept-testing",
-          "guides/hybrid-research",
-          "guides/accessibility-workflow"
+          "guides/hybrid-research"
         ]
       }
     ]
@@ -271,6 +267,11 @@
     {
       "source": "/concepts/ai-participants",
       "destination": "/account/audiences",
+      "permanent": true
+    },
+    {
+      "source": "/testing/human-test",
+      "destination": "/human-insights",
       "permanent": true
     }
   ]
