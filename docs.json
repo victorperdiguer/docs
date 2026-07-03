@@ -73,7 +73,8 @@
               "post-test-questions",
               "advanced-settings",
               "media-canvas"
-            ]
+            ],
+            "icon": "pencil-ruler"
           },
           {
             "group": "Results",
@@ -85,7 +86,8 @@
               "human-insights",
               "test-set-up-confidence",
               "ask-ai"
-            ]
+            ],
+            "icon": "notebook-text"
           }
         ]
       },
@@ -93,8 +95,6 @@
         "group": "AI Accessibility Test",
         "icon": "person-standing",
         "pages": [
-          "about-1",
-          "use-cases-1",
           {
             "group": "Creating an AI Accessibility Test",
             "pages": [
@@ -108,7 +108,9 @@
               "criteria-evaluation",
               "vision-simulation"
             ]
-          }
+          },
+          "about-1",
+          "use-cases-1"
         ]
       },
       {
@@ -147,7 +149,7 @@
           {
             "group": "MCP",
             "pages": [
-              "guides/mcp",
+              "integrations/mcp",
               "guides/untitled-page",
               "guides/untitled-page-1",
               "guides/untitled-page-2",
