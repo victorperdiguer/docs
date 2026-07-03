@@ -2,16 +2,45 @@
 title: "Human Insights"
 ---
 
-AI testing gives you fast, scalable signal — but you can go deeper by putting real people through the same flow. Any AI User Test can be extended into a [Human Test](/testing/human-test): real participants follow the same [mission](/mission) and [scenario](/test-scenario), and their results land in the same platform, so you can compare synthetic and human findings side by side.
+The **Human Insights** tab is the review-and-triage workspace for real test recordings and manually-reviewed sessions. It's less about AI synthesis and more about inspecting the sessions behind the results — the human side of a test, available once you've extended a test into a [Human Test](/testing/human-test).
 
-## When to reach for human insights
+## Overview
 
-This is the polish-then-validate pattern from [Use Cases](/use-cases) in practice. Run the AI test first to catch the obvious problems cheaply, ship the fixes, then bring in humans to confirm the findings and probe the subtler, higher-value questions that need a real person's judgment.
+The tab opens with its own metrics summary for the reviewed sessions:
 
-## Reading them together
+| Metric | What it shows |
+| --- | --- |
+| **Total testers** | How many human sessions were collected |
+| **Success rate** | Share that reached the goal |
+| **Drop-off rate** | Share that left before completing |
+| **Misclick rate** | How often clicks didn't move the session forward |
+| **Average duration** | Typical time spent per session |
 
-Because both sets of results live in one place, you're not reconciling two separate studies. Where AI and human findings agree, you have a confident result. Where they diverge, you've found something worth understanding — a place your synthetic audience and your real users part ways, which is often a signal about the audience profile itself.
+## Recordings
 
-<Card title="Next: Test Set-up Confidence" icon="arrow-right" href="/test-set-up-confidence">
-  See how Uxia gauges the soundness of your test configuration.
+Below the overview, a recordings-style table lists each session for review:
+
+| Participant ID | Status | Duration | Participant path | Response date | Actions |
+| --- | --- | --- | --- | --- | --- |
+| P-01 | Completed | 4m 12s | 8 steps | Jul 2, 2026 | View |
+| P-02 | Abandoned | 1m 05s | 3 steps | Jul 2, 2026 | View |
+| P-03 | Missing questions | 3m 48s | 7 steps | Jul 2, 2026 | View |
+
+<Note>
+  Example rows — your table is populated from the actual sessions collected.
+</Note>
+
+## Statuses
+
+Each session carries a status so you can triage what's worth reviewing:
+
+| Status | Meaning |
+| --- | --- |
+| **Completed** | The tester finished the flow |
+| **Abandoned** | The tester left before completing |
+| **Missing questions** | The session finished but some post-test questions went unanswered |
+| **Recording failed** | The session couldn't be captured |
+
+<Card title="Next: Test Details" icon="arrow-right" href="/test-set-up-confidence">
+  See the setup, audience, and participants behind the test.
 </Card>

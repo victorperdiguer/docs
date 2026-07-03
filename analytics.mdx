@@ -2,24 +2,38 @@
 title: "Analytics"
 ---
 
-Alongside the qualitative findings, every report scores your product against three standardized UX benchmarks — a consistent, comparable measure you can track over time and put in front of stakeholders.
+The **Analytics** tab is the behavior-focused screen. Where the [Insights Report](/results) tells you what the problems are, Analytics shows how testers moved through the flow and where friction actually happened.
 
-## The three scores
+## Navigation overview
 
-- **SUS (System Usability Scale)** — a single number from 0–100, drawn from 10 attitudinal questions. 68 is the empirical average across thousands of products; above 68 is good, above 80 is excellent, and below 68 signals real usability debt.
-- **SUPR-Q** — a broader read expressed as a percentile rank across four dimensions: Usability, Trust, Loyalty, and Appearance. It's how you spot _which_ dimension is dragging the experience down.
-- **Uxia Optimization Score** — Uxia's proprietary benchmark, scored against others in your specific industry vertical rather than a universal dataset, so it tells you whether your UX is actually competitive in your category.
+The top section summarizes movement through the flow:
 
-## Getting value from them
+| Metric | What it shows |
+| --- | --- |
+| **Total testers** | How many synthetic testers ran the flow |
+| **Success rate** | Share of testers who reached the goal |
+| **Drop-off rate** | Share who left before completing |
+| **Misclick rate** | How often testers clicked somewhere that didn't move them forward |
+| **Average steps** | Typical number of steps taken to complete |
+| **Min / Max steps** | The shortest and longest paths taken |
 
-Scores earn their keep when you use them consistently:
+## Journeys diagram
 
-- **Track improvement** — run a test before and after a redesign; a rising SUS confirms the change actually helped, not just that it looked better in review.
-- **Make the case for UX work** — a below-average score is a defensible, quantified argument for investment.
-- **Prioritize by severity** — pair the scores with the Insights Report to stack-rank fixes, tackling whatever's pulling you below the 68 SUS line first.
-- **Compare product areas** — test different flows separately to find where you're weakest.
+Below the overview, a **Journeys Diagram** lays out the step paths with frame previews, so you can see how testers progressed from screen to screen — and where paths split, loop, or diverge between successful and unsuccessful runs.
 
-For the full breakdown of each framework and how to interpret it, see [UX Benchmarks](/concepts/ux-benchmarks).
+## Frame analytics
+
+Select any frame to drill into how testers behaved on that specific screen:
+
+| View | What it shows |
+| --- | --- |
+| **Heatmap** | Where testers clicked on the frame |
+| **Total clicks** | How many clicks the frame received |
+| **Misclick rate** | How often clicks on this frame didn't lead where the tester expected |
+| **Average attempts** | Typical number of tries before moving on |
+| **Tester comments** | Remarks tied to that specific frame |
+
+This is the best tab for questions like: where do testers hesitate, which screen causes misclicks, how many steps success usually takes, and where successful and unsuccessful paths part ways.
 
 <Card title="Next: Post-Test Questions" icon="arrow-right" href="/post-test-questions-1">
   Read back what testers told you after the flow.
