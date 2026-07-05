@@ -2,15 +2,19 @@
 title: "Mission"
 ---
 
-The **Tester Mission** is a short, clear instruction describing what you want the AI user to achieve. It's the single most important field in the builder — it defines the goal of the session and keeps every tester's feedback focused and actionable. The mission is required, and the more specific and granular you make it, the better your results.
+The **Tester Mission** is a short, clear instruction describing what you want the AI tester to achieve. It's one of the most important field in the builder - it defines the goal of the session and keeps every tester's feedback focused and actionable.
+
+The mission is always required, and the more specific and granular you make it, the more targeted the results will be toward the flow you plan to analyze.
 
 ## Write it like a single concrete task
 
 Good missions describe one goal with a clear end state:
 
-- "Complete the registration flow using a social login."
-- "Upgrade your plan from free to premium using a credit card."
-- "Find and purchase one ticket for tonight's 9:00 PM showing."
+> _"Complete the registration flow using a social login."_
+
+> _"Upgrade your plan from free to premium using a Mastercard credit card."_
+
+> _"Find and purchase two tickets for tonight's 9:00 PM showing."_
 
 ## Tips for effective missions
 
@@ -27,8 +31,63 @@ Good missions describe one goal with a clear end state:
 </Tip>
 
 <Note>
-  Each field has a **Review** helper that tightens your wording for clarity. Some flows aren't supported by AI participants — if a mission depends on one, you'll see a prompt to learn more.
+  Each field has a **Review** helper on the top right of the field. This button can help you get more ideas on how to frame your mission.
 </Note>
+
+## Example
+
+Suppose your business objective is:
+
+> **"_Understand whether customers can successfully purchase a new mobile phone plan._"**
+
+It may be tempting to test the entire journey with one mission:
+
+<Warning>
+  **Too Broad**
+
+  "_Find a mobile plan that fits your needs, create an account, purchase the plan, and contact support if you have any questions._"
+</Warning>
+
+Although this sounds like a realistic customer journey, it combines several different tasks into a single mission:
+
+- Finding the right plan
+- Creating an account
+- Completing the purchase
+- Asking for help or contacting support
+
+If testers struggle, it becomes much harder to understand which part of the experience caused the friction.
+
+Instead, split the objective into separate tests and missions:
+
+**Mission 1 (Test 1) - Find a suitable plan**
+
+<Check>
+  "_Find a mobile plan that includes around 10 GB of monthly data and add it to your cart._"
+</Check>
+
+**Mission 2 (Test 2) - Create an account**
+
+<Check>
+  "_Create a new account to become a customer._"
+</Check>
+
+**Mission 3 (Test 3) - Purchase the plan**
+
+<Check>
+  "_Purchase the mobile plan you selected and add an additional product to your order._"
+</Check>
+
+**Mission 4 (Test 4) - Get help**
+
+<Check>
+  _"Find how to contact customer support to ask a question about your subscription."_
+</Check>
+
+Each mission measures one clear user goal. This makes the results easier to interpret and helps you identify exactly where users encounter friction.
+
+<Tip>
+  You can duplicate the tests and change only the Mission to help you set them up faster.
+</Tip>
 
 <Card title="Next: Scenario" icon="arrow-right" href="/test-scenario">
   Give the mission a believable backstory so testers behave like real users.
