@@ -158,14 +158,14 @@
             "group": "MCP",
             "pages": [
               "integrations/mcp",
-              "guides/cursor",
               "guides/untitled-page",
               "guides/untitled-page-1",
               "guides/untitled-page-2",
               "guides/claude-code",
               "guides/claude-desktop-app",
               "guides/untitled-page-3",
-              "guides/lovable"
+              "guides/lovable",
+              "guides/cursor"
             ]
           }
         ]
