@@ -158,14 +158,11 @@
             "group": "MCP",
             "pages": [
               "integrations/mcp",
-              "guides/untitled-page",
-              "guides/untitled-page-1",
-              "guides/untitled-page-2",
               "guides/claude-code",
-              "guides/claude-desktop-app",
-              "guides/untitled-page-3",
+              "guides/untitled-page-2",
+              "guides/cursor",
               "guides/lovable",
-              "guides/cursor"
+              "guides/untitled-page"
             ]
           }
         ]
@@ -271,6 +268,21 @@
     {
       "source": "/account/security-and-sso",
       "destination": "/account/security/data-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/guides/claude-desktop-app",
+      "destination": "/guides/claude-code",
+      "permanent": true
+    },
+    {
+      "source": "/guides/untitled-page-3",
+      "destination": "/guides/untitled-page-2",
+      "permanent": true
+    },
+    {
+      "source": "/guides/untitled-page-1",
+      "destination": "/guides/untitled-page",
       "permanent": true
     }
   ],
