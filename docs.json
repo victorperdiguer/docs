@@ -160,9 +160,9 @@
               "integrations/mcp",
               "guides/claude-code",
               "guides/untitled-page-2",
-              "guides/cursor",
               "guides/lovable",
-              "guides/untitled-page"
+              "guides/untitled-page",
+              "guides/cursor"
             ]
           }
         ]
